@@ -1,0 +1,48 @@
+{
+  "name": "git-worktree-cli",
+  "version": "0.2.0",
+  "description": "CLI for managing ephemeral Git worktrees for parallel AI agent development",
+  "type": "module",
+  "bin": {
+    "worktree": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src/",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrymower/worktree-cli"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "git",
+    "worktree",
+    "cli",
+    "ai",
+    "parallel-development",
+    "monorepo",
+    "workspace"
+  ],
+  "license": "MIT"
+}
